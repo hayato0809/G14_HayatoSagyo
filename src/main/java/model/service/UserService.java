@@ -6,14 +6,13 @@ public class UserService {
 
     private UserDAO dao = new UserDAO();
 
-    /** ID が既に存在するか */
+    /** ID存在チェック */
     public boolean existsUser(String loginId) {
         return dao.exists(loginId);
     }
 
     /** 新規ユーザー登録 */
     public boolean registerUser(String loginId, String password) {
-        int result = dao.insert(loginId, password);
-        return result == 1;
+        return dao.insert(loginId, password) == 1;
     }
 }

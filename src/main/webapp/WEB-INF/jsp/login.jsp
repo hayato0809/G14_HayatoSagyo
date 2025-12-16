@@ -9,66 +9,73 @@
     body {
         font-family: sans-serif;
         text-align: center;
-        margin-top: 80px;
+        margin-top: 90px;
     }
     .input-box {
-        width: 300px;
-        height: 35px;
+        width: 520px;
+        height: 34px;
         background: #ddd;
         border: none;
-        margin-bottom: 25px;
-        padding: 5px;
+        padding: 6px 10px;
         font-size: 16px;
+        box-sizing: border-box;
+    }
+    .label {
+        font-size: 26px;
+        margin: 26px 0 16px 0;
     }
     .btn {
-        width: 200px;
-        height: 40px;
-        margin: 10px 0;
+        width: 160px;
+        height: 42px;
+        margin-top: 26px;
         font-size: 18px;
         background: #ddd;
         border: none;
         cursor: pointer;
     }
-    .error {
-        margin-top: 10px;
-        color: red;
-        font-size: 16px;
+    .error-box {
+        width: 360px;
+        margin: 18px auto 0 auto;
+        padding: 10px 0;
+        background: #ddd;
+        font-size: 18px;
+        color: #000;
+        min-height: 24px; /* 何もなくても高さ確保 */
     }
     .register-link {
         position: fixed;
-        bottom: 20px;
-        right: 30px;
+        right: 40px;
+        bottom: 26px;
+        width: 240px;
+        padding: 12px 10px;
         background: #ddd;
-        padding: 10px 20px;
-        font-size: 16px;
         text-decoration: none;
-        color: black;
+        color: #000;
+        font-size: 16px;
+        display: inline-block;
+        text-align: center;
     }
 </style>
 </head>
 <body>
 
-    <h2>ログインID</h2>
+    <div class="label">ログインID</div>
+    <form action="<%= request.getContextPath() %>/Login" method="post">
+        <input type="text" name="loginId" class="input-box"
+               value="${param.loginId != null ? param.loginId : ''}">
 
-    <!-- ログインフォーム -->
-    <form action="<%= request.getContextPath() %>/LoginServlet" method="post">
-
-        <input type="text" name="loginId" class="input-box">
-
-        <h2>パスワード</h2>
+        <div class="label">パスワード</div>
         <input type="password" name="password" class="input-box">
 
         <br>
         <button type="submit" class="btn">ログイン</button>
 
-        <!-- エラーメッセージ表示欄 -->
-        <div class="error">
+        <div class="error-box">
             ${error}
         </div>
     </form>
 
-    <!-- ユーザー登録画面へ遷移 -->
-    <a href="<%= request.getContextPath() %>/AccountRegisterServlet" class="register-link">
+    <a class="register-link" href="<%= request.getContextPath() %>/AccountRegister">
         ユーザー登録はこちら
     </a>
 

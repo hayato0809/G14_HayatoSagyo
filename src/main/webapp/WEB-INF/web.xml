@@ -29,4 +29,24 @@
     <servlet-name>AccountRegisterServlet</servlet-name>
     <url-pattern>/AccountRegisterServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet1</display-name>
+    <servlet-name>LoginServlet1</servlet-name>
+    <servlet-class>servlet.LoginServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet1</servlet-name>
+    <url-pattern>/LoginServlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TopServlet</display-name>
+    <servlet-name>TopServlet</servlet-name>
+    <servlet-class>servlet.TopServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TopServlet</servlet-name>
+    <url-pattern>/TopServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
