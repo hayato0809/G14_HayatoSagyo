@@ -48,7 +48,7 @@
     <button class="btn">商品別売り上げ確認</button>
 </form>
 
-<form action="${pageContext.request.contextPath}/ProductEdit" method="get">
+<form action="${pageContext.request.contextPath}/admin/menu/list" method="get">
     <button class="btn">商品編集</button>
 </form>
 

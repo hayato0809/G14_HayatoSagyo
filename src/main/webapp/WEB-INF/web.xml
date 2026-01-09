@@ -49,4 +49,44 @@
     <servlet-name>TopServlet</servlet-name>
     <url-pattern>/TopServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminMenuListServlet</display-name>
+    <servlet-name>AdminMenuListServlet</servlet-name>
+    <servlet-class>servlet.AdminMenuListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminMenuListServlet</servlet-name>
+    <url-pattern>/AdminMenuListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ToggleVisibleServlet</display-name>
+    <servlet-name>ToggleVisibleServlet</servlet-name>
+    <servlet-class>servlet.ToggleVisibleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ToggleVisibleServlet</servlet-name>
+    <url-pattern>/ToggleVisibleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminMenuAddServlet</display-name>
+    <servlet-name>AdminMenuAddServlet</servlet-name>
+    <servlet-class>servlet.AdminMenuAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminMenuAddServlet</servlet-name>
+    <url-pattern>/AdminMenuAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminMenuEditServlet</display-name>
+    <servlet-name>AdminMenuEditServlet</servlet-name>
+    <servlet-class>servlet.AdminMenuEditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminMenuEditServlet</servlet-name>
+    <url-pattern>/AdminMenuEditServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
