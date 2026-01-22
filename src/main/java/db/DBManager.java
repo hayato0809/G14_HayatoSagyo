@@ -13,7 +13,7 @@ public class DBManager {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        	throw new RuntimeException("Oracle JDBC Driver not found.", e);
         }
     }
 
